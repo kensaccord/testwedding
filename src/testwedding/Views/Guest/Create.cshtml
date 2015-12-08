@@ -1,4 +1,4 @@
-@model kkwedding.Controllers.Guest
+@model kkwedding.Models.Guest
 
 @{
     ViewData["Title"] = "Create";
@@ -12,27 +12,6 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="Address" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="City" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="City" class="form-control" />
-                <span asp-validation-for="City" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="Email" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger" />
-            </div>
-        </div>
-        <div class="form-group">
             <label asp-for="FirstName" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="FirstName" class="form-control" />
@@ -45,12 +24,18 @@
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger" />
             </div>
+        </div>        <div class="form-group">
+            <label asp-for="Address" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger" />
+            </div>
         </div>
         <div class="form-group">
-            <label asp-for="Phone" class="col-md-2 control-label"></label>
+            <label asp-for="City" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger" />
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
@@ -66,7 +51,22 @@
                 <input asp-for="Zip" class="form-control" />
                 <span asp-validation-for="Zip" class="text-danger" />
             </div>
+        </div>        <div class="form-group">
+            <label asp-for="Email" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger" />
+            </div>
         </div>
+
+        <div class="form-group">
+            <label asp-for="Phone" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger" />
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />

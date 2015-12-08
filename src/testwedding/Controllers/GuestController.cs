@@ -1,27 +1,29 @@
 using System.Linq;
 using kkwedding.Models;
+using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 
 namespace kkwedding.Controllers
 {
-    public class GuestsController : Controller
+    [Authorize]
+    public class GuestController : Controller
     {
         private ApplicationDbContext _context;
 
-        public GuestsController(ApplicationDbContext context)
+        public GuestController(ApplicationDbContext context)
         {
             _context = context;    
         }
 
-        // GET: Guests
+        // GET: Guest
         public IActionResult Index()
         {
             return View(_context.Guest.ToList());
         }
 
-        // GET: Guests/Details/5
+        // GET: Guest/Details/5
         public IActionResult Details(int? id)
         {
             if (id == null)
@@ -38,13 +40,13 @@ namespace kkwedding.Controllers
             return View(guest);
         }
 
-        // GET: Guests/Create
+        // GET: Guest/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Guests/Create
+        // POST: Guest/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Guest guest)
@@ -58,7 +60,7 @@ namespace kkwedding.Controllers
             return View(guest);
         }
 
-        // GET: Guests/Edit/5
+        // GET: Guest/Edit/5
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,7 +76,7 @@ namespace kkwedding.Controllers
             return View(guest);
         }
 
-        // POST: Guests/Edit/5
+        // POST: Guest/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Guest guest)
@@ -88,7 +90,7 @@ namespace kkwedding.Controllers
             return View(guest);
         }
 
-        // GET: Guests/Delete/5
+        // GET: Guest/Delete/5
         [ActionName("Delete")]
         public IActionResult Delete(int? id)
         {
@@ -106,7 +108,7 @@ namespace kkwedding.Controllers
             return View(guest);
         }
 
-        // POST: Guests/Delete/5
+        // POST: Guest/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)

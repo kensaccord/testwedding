@@ -17,7 +17,7 @@ namespace kkwedding.Migrations
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("kkwedding.Controllers.Guest", b =>
+            modelBuilder.Entity("kkwedding.Models.Guest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

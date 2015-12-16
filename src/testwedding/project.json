@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet5-kkwedding-a3bb0a7a-3519-4694-8e5f-9b6a5b2bb6cf",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -8,7 +8,12 @@
   "dependencies": {
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    "Microsoft.AspNet.Authentication": "1.0.0-rc1-final",
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Authentication.Facebook": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Authentication.Google": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Authentication.OAuth": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Cors": "6.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
     "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
@@ -18,13 +23,17 @@
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
     "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
     "Microsoft.Extensions.CodeGenerators.Mvc": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.FileProviderExtensions" : "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-*",
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "Newtonsoft.Json": "7.0.1",
+    "System.Net.Http": "4.0.0"
   },
 
   "commands": {
@@ -39,9 +48,13 @@
 
   "exclude": [
     "wwwroot",
-    "node_modules"
+    "node_modules",
+    "bower_components"
   ],
   "publishExclude": [
+    "node_modules",
+    "bower_components",
+    "**.xproj",
     "**.user",
     "**.vspscc"
   ],

@@ -91,6 +91,17 @@ namespace kkwedding
             app.UseIdentity();
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
+            app.UseFacebookAuthentication(options =>
+            {
+                options.AppId = "1674886002725060";
+                options.AppSecret = "3e8e069342551d4dc2ca3c7b14206f5d";
+            });
+
+            app.UseGoogleAuthentication(options =>
+            {
+                options.ClientId = "619991456803-c5apbkdabesqjkiehddk5t004d6tg7hs.apps.googleusercontent.com";
+                options.ClientSecret = "sUiFEU4ahAoc-XDjWJ30TDYb";
+            });
 
             app.UseMvc(routes =>
             {

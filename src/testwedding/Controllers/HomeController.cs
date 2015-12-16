@@ -17,11 +17,11 @@ namespace kkwedding.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Rsvp()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "RSVP";
 
-            return View();
+            return RedirectToAction("Login", "Account");
         }
 
         public IActionResult Contact()
